@@ -1,3 +1,4 @@
+import 'package:app_countdown/screens/calendar_screen.dart';
 import 'package:app_countdown/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +17,7 @@ class BottomBarState extends State<BottomBar> {
   static final List<Widget> _widgetOptions = <Widget> [
     HomeScreen(),
     const Text("Countdown"),
-    const Text("Calendar")
+    CalendarScreen(),
   ];
 
   void _onItemTapped(int index) {
