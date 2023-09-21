@@ -1,3 +1,4 @@
+import 'package:app_countdown/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,10 +11,10 @@ class BottomBar  extends StatefulWidget {
 }
 
 class BottomBarState extends State<BottomBar> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget> [
-    const Text("Home"),
+    HomeScreen(),
     const Text("Countdown"),
     const Text("Calendar")
   ];
