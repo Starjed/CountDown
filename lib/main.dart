@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'bottom_bar.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Countdown App'),
+      home: const BottomBar(),
     );
   }
 }
