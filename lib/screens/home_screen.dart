@@ -1,13 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreen createState() => _HomeScreen();
+}
+
+class _HomeScreen extends State<HomeScreen> {
+
+  String _text = '';
+
+   @override
+   void initState() {
+     super.initState();
+   }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFeeedf2),
+      backgroundColor: const Color(0xFFeeedf2),
       body: ListView(
         children: [
           Container(
@@ -21,10 +35,10 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                            "GoodMorning"
+                            "Opa Pula pros outros componentes por favor"
                         ),
                         Text(
-                          "Book Tickets"
+                          "Em manutenção!"
                         )
                       ],
                     ),
@@ -41,7 +55,26 @@ class HomeScreen extends StatelessWidget {
                       ),
                     )
                   ],
-                )
+                ),
+                const SizedBox(height:100),
+                TextField(
+                  onChanged: (value) {
+                    setState(() => _text = value);
+                  },
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Escreve aqui',
+                  ),
+                ),
+                const SizedBox(height: 100),
+                Text(
+                    _text,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: Colors.deepOrange,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
           )
